@@ -39,7 +39,7 @@ public class TeamTest {
         testTeam.addMember("Aman");
         testTeam.addMember("Kevin");
         testTeam.addMember("Vala");
-        assert(team.equals(testTeam)); // true case
+        assert(team.equals(testTeam) == true); // true case
 
         // F && T case
         Team falseTeam = new Team("WRONGGGG");
