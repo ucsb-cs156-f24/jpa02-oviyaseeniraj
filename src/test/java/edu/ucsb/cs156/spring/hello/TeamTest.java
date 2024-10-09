@@ -53,6 +53,6 @@ public class TeamTest {
 
         // T && F case
         Team tfTeam = new Team("f24-14");
-        assert(team.equals(testTeam) == false);
+        assert(team.equals(tfTeam) == false);
     }
 }
