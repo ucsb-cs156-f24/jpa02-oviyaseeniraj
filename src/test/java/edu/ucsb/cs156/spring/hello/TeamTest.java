@@ -61,4 +61,9 @@ public class TeamTest {
         tfTeam.addMember("Vala");
         assertEquals(team.equals(tfTeam), false);
     }
+
+    @Test
+    public void hashTest() {
+        assertEquals(team.hashCode(), -1327023895);
+    }
 }
