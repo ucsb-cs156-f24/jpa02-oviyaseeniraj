@@ -25,34 +25,40 @@ public class TeamTest {
     // 100% mutation coverage (all mutants timed out or killed)
     @Test
     public void toString_returns_correct_string() {
-        assertEquals("Team(name=f24-14, members=[Riona, Aman, Kevin, Jennifer, Vala, Oviya])", team.toString());
+        assertEquals("Team(name=f24-14, members=[])", team.toString());
     }
 
     @Test
     public void equals_test() {
-        assertEquals(team.equals(team), true);
+        assertTrue(team.equals(team));
         assertEquals(team.equals(null), false);
         Team testTeam = new Team("f24-14");
-        testTeam.addMember("Oviya");
+        /*testTeam.addMember("Oviya");
         testTeam.addMember("Riona");
         testTeam.addMember("Jennifer");
         testTeam.addMember("Aman");
         testTeam.addMember("Kevin");
-        testTeam.addMember("Vala");
+        testTeam.addMember("Vala");*/
         assertEquals(team.equals(testTeam), true); // true case
 
         // F && T case
         Team falseTeam = new Team("WRONGGGG");
-        falseTeam.addMember("Oviya");
+        /*falseTeam.addMember("Oviya");
         falseTeam.addMember("Riona");
         falseTeam.addMember("Jennifer");
         falseTeam.addMember("Aman");
         falseTeam.addMember("Kevin");
-        falseTeam.addMember("Vala");
-        assertEquals(team.equals(testTeam), false);
+        falseTeam.addMember("Vala");*/
+        assertEquals(team.equals(falseTeam), false);
 
         // T && F case
         Team tfTeam = new Team("f24-14");
+        tfTeam.addMember("Oviya");
+        tfTeam.addMember("Riona");
+        tfTeam.addMember("Jennifer");
+        tfTeam.addMember("Aman");
+        tfTeam.addMember("Kevin");
+        tfTeam.addMember("Vala");
         assertEquals(team.equals(tfTeam), false);
     }
 }
