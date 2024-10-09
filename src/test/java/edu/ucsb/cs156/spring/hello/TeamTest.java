@@ -25,13 +25,13 @@ public class TeamTest {
     // 100% mutation coverage (all mutants timed out or killed)
     @Test
     public void toString_returns_correct_string() {
-        assertEquals("Team(name=f24-14, members=[])", team.toString());
+        assertEquals("Team(name=f24-14, members=[Riona, Aman, Kevin, Jennifer, Vala, Oviya])", team.toString());
     }
 
     @Test
     public void equals_test() {
-        assert(team.equals(team) == true);
-        assert(team.equals(null) == false);
+        assertEquals(team.equals(team), true);
+        assertEquals(team.equals(null), false);
         Team testTeam = new Team("f24-14");
         testTeam.addMember("Oviya");
         testTeam.addMember("Riona");
@@ -39,7 +39,7 @@ public class TeamTest {
         testTeam.addMember("Aman");
         testTeam.addMember("Kevin");
         testTeam.addMember("Vala");
-        assert(team.equals(testTeam) == true); // true case
+        assertEquals(team.equals(testTeam), true); // true case
 
         // F && T case
         Team falseTeam = new Team("WRONGGGG");
@@ -49,10 +49,10 @@ public class TeamTest {
         falseTeam.addMember("Aman");
         falseTeam.addMember("Kevin");
         falseTeam.addMember("Vala");
-        assert(team.equals(testTeam) == false);
+        assertEquals(team.equals(testTeam), false);
 
         // T && F case
         Team tfTeam = new Team("f24-14");
-        assert(team.equals(tfTeam) == false);
+        assertEquals(team.equals(tfTeam), false);
     }
 }
