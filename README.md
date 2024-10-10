@@ -1,21 +1,9 @@
 # jpa02-oviyaseeniraj
 
-<<<<<<< HEAD
 Repo: https://ucsb-cs156-s24/jpa02-oviyaseeniraj
 
 
 Deployed at: http://jpa02-oviyaseeniraj.dokku-14.cs.ucsb.edu/
-=======
-Repo: https://github.com/ucsb-cs156-s24/jpa02-oviyaseeniraj
-
-
-Deployed at: http://jpa02-oviyaseeniraj.dokku-14.cs.ucsb.edu
->>>>>>> 02a9aa1 (rebased)
-
-
-# About this repo
-
-This is a minimal "Hello World" type webapp built with Spring Boot.
 
 # What can you do with this code?
 
